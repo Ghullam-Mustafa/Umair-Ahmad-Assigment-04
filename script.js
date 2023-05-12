@@ -58,13 +58,13 @@ document.getElementById("BetterFormatting").onclick = function () {
 
 
 // --------------------city------------------------------------------------------
-// document.getElementById('city').onclick = function () {
-//     document.getElementById('output').innerHTML = "";
+document.getElementById('city').onclick = function () {
+    document.getElementById('output').innerHTML = "";
 
-//     for (let i = 0; i < city.length; index++) {
-//         let num = i + 1 ;
-//         document.getElementById('output').innerHTML += num + ')' + city[i] + '<br>';
+    for (let i = 0; i < city.length; i++) {
+        let num = i + 1 ;
+        document.getElementById('output').innerHTML += num + ')' + city[i] + '<br>';
         
-//     }
-// }
+    }
+}
  
