@@ -3,6 +3,10 @@ document.getElementById('erase').onclick = function () {
     document.getElementById('data').value = "";
 }
 
+// ----------------cities-----------------------
+
+let city = ["Faisalabad","Multan","Jhung"]
+
 //  output erase 
 document.getElementById('Clean').onclick = function () {
     document.getElementById('output').innerHTML = "";
@@ -37,39 +41,30 @@ document.getElementById('Capitalize').onclick = function () {
 
 // convert lowerlize
 
-document.getElementById('lowercase').onclick = function () {
-    let convertCapitalize1 = '<span style= "text-transform = uppercase"; >' + orignalCities + '</span>'
-    document.getElementById('output').innerHTML = convertCapitalize1
-
-}
 
 
 // ---------------Better-Formatting-------------------
+document.getElementById("BetterFormatting").onclick = function () {
+    let text = document.getElementById('data').value;
 
-// document.getElementById('Better-Formatting').onclick = function () {
-//    let text = document.getElementById('data').value;
-
-//    if (!text) {
-//         alert("Enter a value")
-//         return;
-//    }
-
-//    text = text.toLocaleLowerCase();
-//    document.getElementById('output').style.textTransform = 'capitalize';
-//    document.getElementById('output').innerHTML = text;
-// }
-
-
-document.getElementById('BetterFormatting').onclick = function () {
-    let values = document.getElementById("data").value
- 
-    if (!values) {
-         alert("Enter a value")
-         return
+    if (!text) {
+       alert("Enter a value") 
+       return;
     }
- 
-    text = text.toLocaleLowerCase();
-    document.getElementById('output').style.textTransform = "capitalize";
-    document.getElementById("output").innerHTML = values;
- }
+
+    document.getElementById('output').style.textTransform = 'capitalize';
+    document.getElementById('output').innerHTML = text;
+}
+
+
+// --------------------city------------------------------------------------------
+// document.getElementById('city').onclick = function () {
+//     document.getElementById('output').innerHTML = "";
+
+//     for (let i = 0; i < city.length; index++) {
+//         let num = i + 1 ;
+//         document.getElementById('output').innerHTML += num + ')' + city[i] + '<br>';
+        
+//     }
+// }
  
