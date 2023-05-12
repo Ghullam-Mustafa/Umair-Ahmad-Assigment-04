@@ -42,3 +42,34 @@ document.getElementById('lowercase').onclick = function () {
     document.getElementById('output').innerHTML = convertCapitalize1
 
 }
+
+
+// ---------------Better-Formatting-------------------
+
+// document.getElementById('Better-Formatting').onclick = function () {
+//    let text = document.getElementById('data').value;
+
+//    if (!text) {
+//         alert("Enter a value")
+//         return;
+//    }
+
+//    text = text.toLocaleLowerCase();
+//    document.getElementById('output').style.textTransform = 'capitalize';
+//    document.getElementById('output').innerHTML = text;
+// }
+
+
+document.getElementById('BetterFormatting').onclick = function () {
+    let values = document.getElementById("data").value
+ 
+    if (!values) {
+         alert("Enter a value")
+         return
+    }
+ 
+    text = text.toLocaleLowerCase();
+    document.getElementById('output').style.textTransform = "capitalize";
+    document.getElementById("output").innerHTML = values;
+ }
+ 
