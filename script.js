@@ -9,7 +9,7 @@ document.getElementById('Clean').onclick = function () {
 }
 
 // orignal cities
-let orignalCities = "I love Pakistan <br> I love Faisalabad <br> I love Motherland"
+let orignalCities = "I love pakistan <br> I love faisalabad <br> I love motherland"
 
 
 //  Convert lowwer case 
@@ -30,8 +30,9 @@ document.getElementById('Uppercase').onclick = function () {
 // convert Capitalize
 
 document.getElementById('Capitalize').onclick = function () {
-    let convertCapitalize = '<span style= "text-transform = capitalize"; >' + orignalCities + '</span>'
-    document.getElementById('output').innerHTML = convertCapitalize
+    // let convertCapitalize = '<span style= "text-transform = capitalize"; >' + orignalCities + '</span>'
+    document.getElementById('output').style.textTransform = "capitalize"
+    document.getElementById('output').innerHTML = orignalCities
 }
 
 // convert lowerlize
