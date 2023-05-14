@@ -79,10 +79,10 @@ document.getElementById('addCityInList').onclick = function () {
     if (add.length  < 3) {
         alert("Please Enter correctly name");
         return;
-    // }
-    // let firstName = add.charAt(0).toLocaleUpperCase();
-    // let secondName = add.slice(1).toLocaleLowerCase();
-    // console.log(firstName);
-    // console.log(secondName);
-    // console.log(firstName+secondName);
+    }
+    let firstName = add.charAt(0).toLocaleUpperCase();
+    let secondName = add.slice(1).toLocaleLowerCase();
+    console.log(firstName);
+    console.log(secondName);
+    console.log(firstName+secondName);
 }
