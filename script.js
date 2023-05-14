@@ -57,7 +57,7 @@ document.getElementById("BetterFormatting").onclick = function () {
 }
 
 
-// --------------------city------------------------------------------------------
+// ------------------------------city------------------------------------------------------
 document.getElementById('city').onclick = function () {
     document.getElementById('output').innerHTML = "";
 
@@ -68,3 +68,21 @@ document.getElementById('city').onclick = function () {
     }
 }
  
+// -----------------------------addCityInList----------------------------------------------
+
+document.getElementById('addCityInList').onclick = function () {
+    document.getElementById('output').innerHTML = "";
+    let add = document.getElementById('data').value;
+    city.push(add)
+    
+    // document.getElementById('output').innerHTML = city
+    if (add.length  < 3) {
+        alert("Please Enter correctly name");
+        return;
+    // }
+    // let firstName = add.charAt(0).toLocaleUpperCase();
+    // let secondName = add.slice(1).toLocaleLowerCase();
+    // console.log(firstName);
+    // console.log(secondName);
+    // console.log(firstName+secondName);
+}
