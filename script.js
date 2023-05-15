@@ -5,7 +5,7 @@ document.getElementById('erase').onclick = function () {
 
 // ----------------cities-----------------------
 
-let city = ["Faisalabad","Multan","Jhung"]
+let citys = ["Faisalabad","Multan","Jhung"]
 
 //  output erase 
 document.getElementById('Clean').onclick = function () {
@@ -63,7 +63,7 @@ document.getElementById('city').onclick = function () {
 
     for (let i = 0; i < city.length; i++) {
         let num = i + 1 ;
-        document.getElementById('output').innerHTML += num + ')' + city[i] + '<br>';
+        document.getElementById('output').innerHTML += num + ')' + citys[i] + '<br>';
         
     }
 }
@@ -104,3 +104,18 @@ document.getElementById('city').onclick = function () {
 //         document.getElementById('output').innerHTML = city
 //     }
 // }
+
+
+document.getElementById('addCityInList').onclick = function () {
+    document.getElementById('output').innerHTML = "";
+    let City = document.getElementById('data').value;
+    if (City.length < 3) {
+        alert("Please enter valid number");
+        return;
+    }
+    let cityFirstLetter = City.charAt(0).toLocaleUpperCase();
+    let cityAllLetters = City.slice(1).toLocaleLowerCase();
+    let cityWordInCapitalize = cityFirstLetter + cityAllLetters;
+    console.log(cityWordInCapitalize);
+
+}
