@@ -70,37 +70,37 @@ document.getElementById('city').onclick = function () {
  
 // -----------------------------addCityInList----------------------------------------------
 
-document.getElementById('addCityInList').onclick = function () {
-    document.getElementById('output').innerHTML = "";
-    let add = document.getElementById('data').value;
-    // city.push(add)
+// document.getElementById('addCityInList').onclick = function () {
+//     document.getElementById('output').innerHTML = "";
+//     let add = document.getElementById('data').value;
+//     // city.push(add)
     
-    // document.getElementById('output').innerHTML = city
-    if (add.length  < 3) {
-        alert("Please Enter correctly name");
-        return;
-    }
-    let firstName = add.charAt(0).toLocaleUpperCase();
-    let secondName = add.slice(1).toLocaleLowerCase();
-    // console.log(firstName);
-    // console.log(secondName);
-    // console.log(firstName+secondName);
-    let newName = firstName + secondName ;
-    console.log(newName);
-    let cityFond = false
+//     // document.getElementById('output').innerHTML = city
+//     if (add.length  < 3) {
+//         alert("Please Enter correctly name");
+//         return;
+//     }
+//     let firstName = add.charAt(0).toLocaleUpperCase();
+//     let secondName = add.slice(1).toLocaleLowerCase();
+//     // console.log(firstName);
+//     // console.log(secondName);
+//     // console.log(firstName+secondName);
+//     let newName = firstName + secondName ;
+//     console.log(newName);
+//     let cityFond = false
 
-    for (let i = 0; i < city.length; i++) {
-       if (newName[i] === "Faisalabad") {
-        cityFond = true
-        document.getElementById('output').innerHTML = "Faisalabad is already in your list";
-       }
+//     for (let i = 0; i < city.length; i++) {
+//        if (newName[i] === "Faisalabad") {
+//         cityFond = true
+//         document.getElementById('output').innerHTML = "Faisalabad is already in your list";
+//        }
         
-    }
+//     }
 
-    if (cityFond === false) {
+//     if (cityFond === false) {
         
-        city.push(newName);
+//         city.push(newName);
 
-        // document.getElementById('output').innerHTML = city
-    }
-}
+//         document.getElementById('output').innerHTML = city
+//     }
+// }
