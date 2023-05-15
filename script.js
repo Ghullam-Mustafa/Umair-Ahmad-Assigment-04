@@ -73,7 +73,7 @@ document.getElementById('city').onclick = function () {
 document.getElementById('addCityInList').onclick = function () {
     document.getElementById('output').innerHTML = "";
     let add = document.getElementById('data').value;
-    city.push(add)
+    // city.push(add)
     
     // document.getElementById('output').innerHTML = city
     if (add.length  < 3) {
@@ -86,11 +86,21 @@ document.getElementById('addCityInList').onclick = function () {
     // console.log(secondName);
     // console.log(firstName+secondName);
     let newName = firstName + secondName ;
+    console.log(newName);
+    let cityFond = false
 
-    for (let index = 0; index < city.length; index++) {
-       if (newName == "Faisalabad") {
-        document.getElementById('output').innerHTML = "Faisalabad is already in your list"
+    for (let i = 0; i < city.length; i++) {
+       if (newName[i] === "Faisalabad") {
+        cityFond = true
+        document.getElementById('output').innerHTML = "Faisalabad is already in your list";
        }
         
+    }
+
+    if (cityFond === false) {
+        
+        city.push(newName);
+
+        // document.getElementById('output').innerHTML = city
     }
 }
