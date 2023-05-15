@@ -135,3 +135,34 @@ document.getElementById('addCityInList').onclick = function () {
     }
 
 }
+
+// -----------------------CheckYourCityInlist----------------------------------------------
+document.getElementById('CheckYourCityInlist').onclick = function () {
+
+    document.getElementById('output').innerHTML = "";
+
+    let CheckYourCity = document.getElementById('data').value;
+    if (!CheckYourCity) {
+       alert("Enter a city ") 
+       return;
+    }
+    let first = CheckYourCity.charAt(0).toLocaleUpperCase();
+    console.log(first);
+    let remaining = CheckYourCity.slice(1).toLocaleLowerCase();
+    console.log(remaining);
+    let cityName = first + remaining;
+    let cityfond = false;
+    for (let i = 0; i < citys.length; i++) {
+        if (citys[i] === cityName) {
+            cityfond = true
+            let html = '<span style = "color: green; font-size: 20px;">'+cityName +'</span>' +" is already add ❤"
+            document.getElementById('output').innerHTML = html;
+        }
+        
+        
+    }
+    if(cityfond == false){
+            let html = '<span style = "color: red; font-size: 20px;">'+cityName +'</span>' +" sorry this city is not add kindly pres add your city in list"
+            document.getElementById('output').innerHTML = html
+        }
+}
