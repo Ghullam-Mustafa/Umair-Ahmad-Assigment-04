@@ -61,8 +61,9 @@ document.getElementById("BetterFormatting").onclick = function () {
 document.getElementById('city').onclick = function () {
     document.getElementById('output').innerHTML = "";
 
-    for (let i = 0; i < city.length; i++) {
+    for (let i = 0; i < citys.length; i++) {
         let num = i + 1 ;
+        
         document.getElementById('output').innerHTML += num + ')' + citys[i] + '<br>';
         
     }
@@ -117,5 +118,20 @@ document.getElementById('addCityInList').onclick = function () {
     let cityAllLetters = City.slice(1).toLocaleLowerCase();
     let cityWordInCapitalize = cityFirstLetter + cityAllLetters;
     console.log(cityWordInCapitalize);
+
+    let cityFound = false
+    for (let i = 0; i < citys.length; i++) {
+        if (citys[i] == cityWordInCapitalize ) {
+            cityFound = true
+            let html = '<span style = "color: red; font-size: 20px;">'+cityWordInCapitalize +'</span>' +" is already add"
+            document.getElementById('output').innerHTML = html
+        }
+    }
+
+    if (cityFound === false) {
+        citys.push(cityWordInCapitalize);
+        let html = '<span style = "color: green; font-size: 20px;">'+cityWordInCapitalize +'</span>' +" is successfully add"
+        document.getElementById('output').innerHTML = html
+    }
 
 }
