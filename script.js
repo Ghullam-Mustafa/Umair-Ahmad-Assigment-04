@@ -169,5 +169,5 @@ document.getElementById('CheckYourCityInlist').onclick = function () {
 
 // ---------------------------sticker---------------------------------
 function addemoji(params1) {
-    document.getElementById('output').innerHTML = params1;
+    document.getElementById('output').innerHTML += params1;
 }
