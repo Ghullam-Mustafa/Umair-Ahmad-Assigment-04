@@ -171,3 +171,15 @@ document.getElementById('CheckYourCityInlist').onclick = function () {
 function addemoji(params1) {
     document.getElementById('output').innerHTML += params1;
 }
+
+// -----------------------findThisWord-------------------------------------
+
+document.getElementById('findThisWord').onclick = function () {
+    let someText = "My name is Mustafa.";
+    someText = someText.toLocaleLowerCase();
+    let wordFromInputField = "naMe";
+    wordFromInputField = wordFromInputField.toLocaleLowerCase();
+    
+    let findWord = someText.charAt(5)
+    document.getElementById('output').innerHTML = findWord
+}
