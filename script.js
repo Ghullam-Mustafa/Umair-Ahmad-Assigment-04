@@ -195,3 +195,40 @@ document.getElementById('findThisWord').onclick = function () {
     }
 }
 
+// ------------------------------replaceThisWord--------------------------------------------
+document.getElementById('replaceThisWord').onclick = function () {
+    
+
+   
+
+    let newText = "I Love my country Pakistan. <br> I Love my city Faisalabad. <br>I Love my Homeland. <br>";
+     
+    newText = newText.toLocaleLowerCase();
+
+    let word = document.getElementById('data').value;
+
+    if (!word) {
+        alert("Please type a word to replacing")
+        return;
+    }
+
+    let replaceWith = prompt('Enter a word that you want to replace with');
+
+    if (!replaceWith) {
+        alert("Please type a word to replace it with" + word + ".")
+
+        
+    }
+
+    word = word.toLocaleLowerCase();
+
+    word = new RegExp(word , 'g');
+
+    replaceWith = replaceWith.toLocaleLowerCase();
+    console.log(replaceWith)
+    let replacedWord = newText.replace(word,replaceWith);
+    console.log(replacedWord);
+
+    document.getElementById('output').innerHTML = replacedWord;
+
+}
