@@ -177,7 +177,7 @@ function addemoji(params1) {
 document.getElementById('findThisWord').onclick = function () {
     
     
-    let someText = "My name is Mustafa.";
+    let someText = "I Love my country Pakistan. <br> I Love my city Faisalabad. <br>I Love my Homeland. <br>";
     someText = someText.toLocaleLowerCase();
     let wordFromInputField = document.getElementById('data').value;
     if (!wordFromInputField) {
@@ -189,8 +189,9 @@ document.getElementById('findThisWord').onclick = function () {
     let findWord = someText.indexOf(wordFromInputField)
     // document.getElementById('output').innerHTML = findWord;
     if (findWord !== -1) {
-        document.getElementById('output').innerHTML = "word found at index " + "(" + findWord + ")";
+        document.getElementById('output').innerHTML = "Your word " + '<span style = "color : green;">'+ wordFromInputField +'</span>'   + "(" + findWord + ")";
     }else{
         document.getElementById('output').innerHTML = "Word are not found"
     }
 }
+
