@@ -175,11 +175,22 @@ function addemoji(params1) {
 // -----------------------findThisWord-------------------------------------
 
 document.getElementById('findThisWord').onclick = function () {
+    
+    
     let someText = "My name is Mustafa.";
     someText = someText.toLocaleLowerCase();
-    let wordFromInputField = "naMe";
+    let wordFromInputField = document.getElementById('data').value;
+    if (!wordFromInputField) {
+        alert("some text is This (My name is Mustafa)")
+    return;
+    }
     wordFromInputField = wordFromInputField.toLocaleLowerCase();
     
-    let findWord = someText.charAt(5)
-    document.getElementById('output').innerHTML = findWord
+    let findWord = someText.indexOf(wordFromInputField)
+    // document.getElementById('output').innerHTML = findWord;
+    if (findWord !== -1) {
+        document.getElementById('output').innerHTML = "word found at index " + "(" + findWord + ")";
+    }else{
+        document.getElementById('output').innerHTML = "Word are not found"
+    }
 }
